@@ -50,5 +50,3 @@ npm run start:download
 下载时会有进度条显示，下载完的音乐文件会保存在根目录下的**downloads**目录里
 
 （Download complete, The file is saved in the **downloads** directory ）
-
-![image-20210323191022713](C:\Users\WeicMa\AppData\Roaming\Typora\typora-user-images\image-20210323191022713.png)
