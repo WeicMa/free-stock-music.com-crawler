@@ -34,9 +34,7 @@ function start(url) {
         })
         return audioSrc;
     }).then(audioSrc => {
-        if (audioSrc.length == 0) {
-            isExit = true;
-        }
+        if (audioSrc.length == 0) isExit = true;
 
         // 把爬到的数据记录到文件
         fs.readFile('./data.json', (readErr, fileData) => {
@@ -54,11 +52,8 @@ function start(url) {
         pageCount++;    // 加页数
 
         // 递归
-        if (stopPage != 0) {
-            if (isExit == false && pageCount <= stopPage) return start(`${baseUrl}page-${pageCount}.html`);
-        } else {
-            if (isExit == false) return start(`${baseUrl}page-${pageCount}.html`);
-        }
+        if (stopPage != 0 && isExit == false && pageCount <= stopPage) return start(`${baseUrl}page-${pageCount}.html`);
+        if (isExit == false) return start(`${baseUrl}page-${pageCount}.html`);
         console.log('\x1B[47m%s\x1B[0m', `所有任务已完成，获得了${dataCount + audioSrc.length}条数据`);
     }).catch(e => {
         isExit = true;

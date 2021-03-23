@@ -26,7 +26,6 @@ if (fileData.length > 0) data = JSON.parse(fileData.toString());
     let fileExisted = fs.existsSync('./downloads/' + item.file_name);
     if (fileExisted) {
         console.log(`《${item.title}》已存在，即将跳过下载`);
-        // 递归
         currentDataIndex++;
         return start();
     }
