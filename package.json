@@ -10,7 +10,7 @@
     "start:download": "node download.js"
   },
   "author": "Weic Ma",
-  "license": "GPL3",
+  "license": "GPL-3.0",
   "dependencies": {
     "cheerio": "^1.0.0-rc.5",
     "progress": "^2.0.3",
